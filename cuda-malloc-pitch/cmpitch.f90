@@ -21,7 +21,18 @@ contains
 end module work_module
 
 
-program runstreams
+program cmpitch
+
+  ! This program creates a 2-D array on the host of dimensions 2 x 1,000,000
+  ! Where the elements in row 1 are initialized to 1.0d0
+  ! and the elements in row 2 are initialized to 0.0d0
+
+  ! Memory is allocated for this array on the device using cudaMallocPitch
+  ! CUDA streams asynchronously transfer data to device
+  ! CUDA streams run kernel setting elements in row 2 to the corresponding value in row 1.
+  ! CUDA streams asynchronously transfer data back to host
+
+  ! The array contents are summed and printed. Correct execution will yield 2.0d+6
 
   use work_module
   use cudafor
@@ -133,5 +144,11 @@ program runstreams
   end do
 
   write(*,*) 'Sum of x is: ', xsum
+
+  if (xsum .eq. 2.0d6) then
+     write(*,*) 'SUCCESS!'
+  else
+     write(*,*) 'TEST FAILED!'
+  end if
   
-end program runstreams
+end program cmpitch
