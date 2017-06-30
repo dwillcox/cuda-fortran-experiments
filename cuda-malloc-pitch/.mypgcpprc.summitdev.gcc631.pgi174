@@ -1,0 +1,26 @@
+# /lib/libc.so.6: not found.  Searching.
+# /usr/lib64/libc.so.6: found.
+##### localrc.summitdev-login1 contents #####
+set LDSO=/lib64/ld64.so.2;
+set GCCDIR=/autofs/nccs-svm1_sw/summitdev/gcc/6.3.1-20170301/bin/../lib/gcc/powerpc64le-none-linux-gnu/6.3.1;
+set GPPDIR=ignoring duplicate directory "/autofs/nccs-svm1_sw/summitdev/gcc/6.3.1-20170301/bin/../lib/gcc/../../lib/gcc/powerpc64le-none-linux-gnu/6.3.1/../../../../include/c++/6.3.1" ignoring duplicate directory "/autofs/nccs-svm1_sw/summitdev/gcc/6.3.1-20170301/bin/../lib/gcc/../../lib/gcc/powerpc64le-none-linux-gnu/6.3.1/../../../../include/c++/6.3.1/powerpc64le-none-linux-gnu" ignoring duplicate directory "/autofs/nccs-svm1_sw/summitdev/gcc/6.3.1-20170301/bin/../lib/gcc/../../lib/gcc/powerpc64le-none-linux-gnu/6.3.1/../../../../include/c++/6.3.1/backward" ignoring duplicate directory "/autofs/nccs-svm1_sw/summitdev/gcc/6.3.1-20170301/bin/../lib/gcc/../../lib/gcc/powerpc64le-none-linux-gnu/6.3.1/include" ignoring duplicate directory "/autofs/nccs-svm1_sw/summitdev/gcc/6.3.1-20170301/bin/../lib/gcc/../../lib/gcc/powerpc64le-none-linux-gnu/6.3.1/include-fixed" /autofs/nccs-svm1_sw/summitdev/.swci/0-core/opt/spack/20170405/linux-rhel7-ppc64le/gcc-4.8.5/python-3.5.2-yf5duuuqo6zirq75nisnwldiuuk6nz3s/include /autofs/nccs-svm1_sw/summitdev/gcc/6.3.1-20170301/bin/../lib/gcc/powerpc64le-none-linux-gnu/6.3.1/../../../../include/c++/6.3.1 /autofs/nccs-svm1_sw/summitdev/gcc/6.3.1-20170301/bin/../lib/gcc/powerpc64le-none-linux-gnu/6.3.1/../../../../include/c++/6.3.1/powerpc64le-none-linux-gnu /autofs/nccs-svm1_sw/summitdev/gcc/6.3.1-20170301/bin/../lib/gcc/powerpc64le-none-linux-gnu/6.3.1/../../../../include/c++/6.3.1/backward /autofs/nccs-svm1_sw/summitdev/gcc/6.3.1-20170301/bin/../lib/gcc/powerpc64le-none-linux-gnu/6.3.1/include /autofs/nccs-svm1_sw/summitdev/gcc/6.3.1-20170301/bin/../lib/gcc/powerpc64le-none-linux-gnu/6.3.1/include-fixed /usr/local/include /usr/include;
+set GCCINC=ignoring duplicate directory "/autofs/nccs-svm1_sw/summitdev/gcc/6.3.1-20170301/bin/../lib/gcc/../../lib/gcc/powerpc64le-none-linux-gnu/6.3.1/include" /autofs/nccs-svm1_sw/summitdev/.swci/0-core/opt/spack/20170405/linux-rhel7-ppc64le/gcc-4.8.5/python-3.5.2-yf5duuuqo6zirq75nisnwldiuuk6nz3s/include /autofs/nccs-svm1_sw/summitdev/gcc/6.3.1-20170301/bin/../lib/gcc/powerpc64le-none-linux-gnu/6.3.1/include /usr/local/include /usr/include;
+set G77DIR=/autofs/nccs-svm1_sw/summitdev/gcc/6.3.1-20170301/bin/../lib/gcc/powerpc64le-none-linux-gnu/6.3.1/;
+set OEM_INFO=linuxpower target on Linuxpower $INFOTPVAL;
+set LOCALRC=YES;
+set THROW=__THROW=;
+set EXTENSION=__extension__=;
+set COMPGLIBLFDIR=;
+set COMPGCCINCDIR=include-gcc49;
+set GNUATOMIC=-latomic;
+set LC=$if(-Bstatic,--start-group -lgcc -lgcc_eh -lc --end-group , -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed);
+set DEFLIBDIR=/usr/lib64;
+set DEFSTDOBJDIR=/usr/lib64;
+# GLIBC version 2.17
+# GCC version 6.3.1
+set GCCVERSION=60301;
+set LOCALDEFS=__STDC_HOSTED__;
+set LLVMDIR=/sw/summitdev/pgi/linuxpower/17.4/share/llvm;
+export PGI=$COMPBASE;
+# makelocalrc executed by dwillcox Thu Jun 22 14:47:20
+############################
