@@ -1,5 +1,7 @@
 module work_module
 
+  use cudafor
+  
   implicit none
   
 contains
@@ -8,7 +10,7 @@ contains
     integer, value, intent(in) :: coffset, n, xPitch, xLength
     double precision, intent(inout) :: x(1:xPitch,1:xLength)
     integer          :: i
-    
+
     i = blockDim%x * (blockIdx%x - 1) + threadIdx%x
     if (i > n) then
        return
@@ -104,7 +106,7 @@ program cmpitch
         write(*,*) cudaErrorMessage
      end if
   enddo
-
+  
   ! Asynchronously work on chunks of x
   do i = 1, numStreams
      chunkOffset = (i-1) * streamSize
@@ -129,11 +131,21 @@ program cmpitch
   ! Synchronize streams
   do i = 1, numStreams
      istat = cudaStreamSynchronize(streams(i))
+     if (istat /= 0) then
+        write(*,*) 'i = ', i
+        cudaErrorMessage = cudaGetErrorString(istat)
+        write(*,*) cudaErrorMessage
+     end if
   enddo
 
   ! Destroy streams
   do i = 1, numStreams
      istat = cudaStreamDestroy(streams(i))
+     if (istat /= 0) then
+        write(*,*) 'i = ', i
+        cudaErrorMessage = cudaGetErrorString(istat)
+        write(*,*) cudaErrorMessage
+     end if     
   enddo
 
   ! Note that calling the intrinsic sum function
