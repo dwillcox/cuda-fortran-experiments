@@ -1,8 +1,8 @@
 Test program for `cudaMallocPitch`.
 
 Correct execution of the program should print the following, as tested
-on a GTX 640 and GTX 960 using PGI 17.4, GCC 6.3.1, and version 8.0.61
-of the CUDA Toolkit.
+on a GTX 640, GTX 960, and Titan X using PGI 17.4, GCC 6.3.1, and
+version 8.0.61 of the CUDA Toolkit.
 
 ```
  Sum of x is:     2000000.000000000     
