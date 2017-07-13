@@ -1,0 +1,1 @@
+Test program for using managed memory with a derived type array in CUDA Fortran.
