@@ -1,0 +1,1 @@
+Test program for using managed memory with a pointer array in CUDA Fortran.
